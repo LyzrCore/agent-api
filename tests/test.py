@@ -1,5 +1,6 @@
-from client import *
-from client import AgentAPI
+from agent_api import FeatureConfig
+from agent_api.client import *
+from agent_api.client import AgentAPI
 # from unittest.mock import patch, MagicMock
 
 import pytest
