@@ -1,14 +1,12 @@
 from __future__ import annotations
 
-import json
-from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, List, Optional
 
 import httpx
 from .models.agents import AgentConfig
 from .models.chat import ChatRequest
-from .models.environment import EnvironmentConfig,FeatureConfig
-from .models.error_handling import HTTPValidationError, ValidationError
+from .models.environment import EnvironmentConfig
+from .models.error_handling import HTTPValidationError
 from .models.session import Session
 from .models.task import TaskResponse,TaskStatus
 from .models.user import UserCreate,UserUpdate
