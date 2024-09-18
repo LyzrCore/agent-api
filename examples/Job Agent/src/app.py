@@ -9,8 +9,8 @@ from utils import (social_media,
                    reference_email_draft,
                    about_app)
 
-from lyzr_agent_api import AgentAPI, ChatRequest
 from job_finder import JobFinder
+from create_agent import chat_agent
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,16 +19,12 @@ page_config()
 style_app()
 
 
-
 openai_api_key = os.getenv('OPENAI_API_KEY')
-lyzr_x_key = os.getenv('X_API_Key')
 serp_api_key = os.getenv('SERP_KEY')
 Agent_ID = os.getenv('AGENT_ID')
 User_ID = os.getenv('USER_ID')
 Session_ID = os.getenv('SESSION_ID')
 
-# Initialize client for Lyzr Agent API
-client = AgentAPI(x_api_key=lyzr_x_key)
 
 image = "src/logo/lyzr-logo-cut.png"
 st.image(image=image)
@@ -51,13 +47,14 @@ if st.button("Search Jobs"):
         with st.spinner("🕵🏼‍Searching Jobs For You..."):
             jobs, resumeData = JobFinder(SERP_KEY=serp_api_key, OPENAI_API_KEY=openai_api_key)
             emailReference = reference_email_draft()
+
             if (jobs and resumeData) != '':
-                response = client.chat_with_agent(json_body=ChatRequest(
+                response = chat_agent(
                     user_id=User_ID,
                     agent_id=Agent_ID,
                     message=f"""This is resume data:{resumeData} and here are the jobs:{jobs}, the reference mail:{emailReference}""",
                     session_id=Session_ID
-                ))
+                )
 
                 if response:
                     st.write('📧Email has been sent...')
