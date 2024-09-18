@@ -1,5 +1,4 @@
-# Job Agent Powered by [Lyzr.ai](https://www.lyzr.ai/)
-
+# Job Agent Powered by [Lyzr Agent API](https://agent.api.lyzr.app/docs#overview) 
 
 **Job Agent** is a Streamlit-based web application that allows users to upload their resume and search for jobs tailored to their skills. The app is powered by the [Lyzr Agent API](https://agent.api.lyzr.app/docs#overview) platform, and Serp API to provide AI-driven job search capabilities.
 
