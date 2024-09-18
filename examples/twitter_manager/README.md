@@ -20,26 +20,28 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-1. **Install dependencies**:
-
-    Make sure you have Python and pip installed. Then, run:
+1. Install the required dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
+   
+2. Run create_agent.py file
 
-2. **Set up environment variables**:
+   This File creates Environment, Agent and Returns agent_id. This Agent ID used in .env file.  
 
-    Create a `.env` file in the root directory of the project and add your OpenAI and Lyzr API keys:
-
-    ```bash
-    OPENAI_API_KEY=your_openai_api_key
-    LYZR_API_KEY=your_lyzr_api_key
+   ```bash
+    python create_agent.py
     ```
 
-3. **Run the Streamlit app**:
+3. Create a `.env` file in the root directory with the following content:
 
-    Launch the application using Streamlit:
+    ```
+    LYZR_API_KEY=your_lyzr_api_key
+    AGENT_ID=your_agent_id
+    ```
+
+4. Run the app using Streamlit:
 
     ```bash
     streamlit run app.py

@@ -21,34 +21,31 @@ Ensure you have the following installed on your system:
 - A [Lyzr](https://lyzr.ai) account with API access
 - An [OpenAI](https://openai.com) API key
 
-### Setup Instructions
+## Installation
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/harshit-lyzr/product_description_agent.git
-    cd product_description_agent
-    ```
+1. Install the required dependencies:
 
-2. **Create a Virtual Environment** (optional but recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. **Install Dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
+   
+2. Run create_agent.py file
 
-4. **Set Up Environment Variables**:
+   This File creates Environment, Agent and Returns agent_id. This Agent ID used in .env file.  
 
-    Create a `.env` file in the project root and add your API keys:
-    ```env
-    OPENAI_API_KEY=your_openai_api_key
-    LYZR_API_KEY=your_lyzr_api_key
+   ```bash
+    python create_agent.py
     ```
 
-5. **Run the Application**:
+3. Create a `.env` file in the root directory with the following content:
+
+    ```
+    LYZR_API_KEY=your_lyzr_api_key
+    AGENT_ID=your_agent_id
+    ```
+
+4. Run the app using Streamlit:
+
     ```bash
     streamlit run app.py
     ```

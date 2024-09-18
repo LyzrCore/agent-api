@@ -17,32 +17,34 @@ Make sure the following are installed:
 - LyzrAgent SDK
 - dotenv
 
-Install the required dependencies by running:
+## Installation
 
-```bash
-pip install streamlit lyzr_agent python-dotenv
-```
-# Setup
+1. Install the required dependencies:
 
-### Clone the Repository:
+    ```bash
+    pip install -r requirements.txt
+    ```
+   
+2. Run create_agent.py file
 
-```bash
-git clone https://github.com/your-username/lyzr-newsletter-generator.git
-cd lyzr-newsletter-generator
-```
+   This File creates Environment, Agent and Returns agent_id. This Agent ID used in .env file.  
 
-### Set Up Environment Variables:
-Create a .env file in the root directory and add your API keys:
-```bash
-OPENAI_API_KEY=your_openai_api_key
-LYZR_API_KEY=your_lyzr_api_key
-```
+   ```bash
+    python create_agent.py
+    ```
 
-### Run the Application:
-Start the Streamlit application:
-```bash
-streamlit run app.py
-```
+3. Create a `.env` file in the root directory with the following content:
+
+    ```
+    LYZR_API_KEY=your_lyzr_api_key
+    AGENT_ID=your_agent_id
+    ```
+
+4. Run the app using Streamlit:
+
+    ```bash
+    streamlit run app.py
+    ```
 
 ### How It Works
 - The LyzrAgent is initialized with both OpenAI and Lyzr API keys.

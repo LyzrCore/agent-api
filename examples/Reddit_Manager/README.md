@@ -21,30 +21,28 @@ A simple Streamlit app integrated with the Lyzr API and OpenAI API to manage and
 
 ## Installation
 
-1. **Clone the repository**:
-
-    ```bash
-    git clone https://github.com/harshit-lyzr/Reddit_manager.git
-    cd Reddit-manager
-    ```
-
-2. **Install dependencies**:
+1. Install the required dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
+   
+2. Run create_agent.py file
 
-3. **Set up environment variables**:
+   This File creates Environment, Agent and Returns agent_id. This Agent ID used in .env file.  
 
-    Create a `.env` file in the root directory and add the following keys:
+   ```bash
+    python create_agent.py
+    ```
 
-    ```bash
-    OPENAI_API_KEY=your_openai_api_key
+3. Create a `.env` file in the root directory with the following content:
+
+    ```
     LYZR_API_KEY=your_lyzr_api_key
     AGENT_ID=your_agent_id
     ```
 
-4. **Run the app**:
+4. Run the app using Streamlit:
 
     ```bash
     streamlit run app.py

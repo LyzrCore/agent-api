@@ -32,28 +32,31 @@ This project is a **Streamlit** web application that generates personalized sale
 - Lyzr Agent API Key
 - OpenAI API Key
 
-### Installation
+## Installation
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/harshit-lyzr/website_to_sales_email_tool
-    cd website-to-sales-email-generator
-    ```
+1. Install the required dependencies:
 
-2. **Create and activate a virtual environment** (optional but recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # For Windows: venv\Scripts\activate
-    ```
-
-3. **Install the required dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
+   
+2. Run create_agent.py file
 
-4. **Set up your environment variables** (see [Environment Variables](#environment-variables)).
+   This File creates Environment, Agent and Returns agent_id. This Agent ID used in .env file.  
 
-5. **Run the application**:
+   ```bash
+    python create_agent.py
+    ```
+
+3. Create a `.env` file in the root directory with the following content:
+
+    ```
+    LYZR_API_KEY=your_lyzr_api_key
+    AGENT_ID=your_agent_id
+    ```
+
+4. Run the app using Streamlit:
+
     ```bash
     streamlit run app.py
     ```
