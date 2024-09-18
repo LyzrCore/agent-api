@@ -84,20 +84,4 @@ print('Agent is created successfully')
 agent_id = agent['agent_id']
 
 
-# save the agent_id variable into the .env file for confidentiality
-with open("examples/Job Agent/.env", "a") as env_file:
-    env_file.write(f"\nAGENT_ID='{str(agent_id)}'")
-    print("Agent ID saved to .env file successfully!")
-
-
-# Initialize a function to chat with agent
-def chat_agent(agent_id, user_id, session_id, message):
-    chat_json_body = ChatRequest(
-        user_id=user_id,
-        agent_id=agent_id,
-        message=message,
-        session_id=session_id
-    )
-
-    response = api_client.chat_with_agent(json_body=chat_json_body)
-    return response
+print(agent_id) #63kjksdbxxxgkxxxx45

@@ -10,7 +10,7 @@ from utils import (social_media,
                    about_app)
 
 from job_finder import JobFinder
-from create_agent import chat_agent
+from lyzr_agent_api import ChatRequest, AgentAPI
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,7 +18,7 @@ load_dotenv()
 page_config()
 style_app()
 
-
+lyzr_api_key = os.getenv('X_API_Key')
 openai_api_key = os.getenv('OPENAI_API_KEY')
 serp_api_key = os.getenv('SERP_KEY')
 Agent_ID = os.getenv('AGENT_ID')
@@ -49,12 +49,16 @@ if st.button("Search Jobs"):
             emailReference = reference_email_draft()
 
             if (jobs and resumeData) != '':
-                response = chat_agent(
+                client = AgentAPI(x_api_key=lyzr_api_key)
+                
+                chat_json = ChatRequest(
                     user_id=User_ID,
                     agent_id=Agent_ID,
                     message=f"""This is resume data:{resumeData} and here are the jobs:{jobs}, the reference mail:{emailReference}""",
                     session_id=Session_ID
                 )
+
+                response = client.chat_with_agent(json_body=chat_json)
 
                 if response:
                     st.write('📧Email has been sent...')
