@@ -1,6 +1,6 @@
-# ThoughCast AI Powered by [Lyzr Agent API](https://agent.api.lyzr.app/docs#overview) 
+# Finance Buddy Powered by [Lyzr Agent API](https://agent.api.lyzr.app/docs#overview) 
 
-This app takes user ideas and transforms them into fully optimized YouTube scripts through a seamless process. It uses advanced AI to identify high-volume, low-competition keywords, create engaging scripts with professional hooks and CTAs, and even convert the final product into voice—all designed to maximize audience engagement and SEO effectiveness.
+**Finance Buddy** is a personal budget planner app that helps users manage their finances by analyzing monthly budget data and providing tailored suggestions. Users can upload their budget CSV and input their income to receive insights on expenses, and get actionable advice for achieving financial stability and meeting savings goals. This leverage the power of `Lyzr Agent API`.
 
 ## Prerequisites
 
@@ -16,12 +16,12 @@ Before running the application, make sure you have the following:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ThoughtCast-AI.git
+   git clone https://github.com/your-username/Finance-Buddy.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd ThoughCast-AI
+   cd Finance-Buddy
    ```
 
 3. Install the required dependencies:

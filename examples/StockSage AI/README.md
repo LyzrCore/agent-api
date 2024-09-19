@@ -16,12 +16,12 @@ Before running the application, make sure you have the following:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/StockSage AI.git
+   git clone https://github.com/your-username/StockSage-AI.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd StockSage AI
+   cd StockSage-AI
    ```
 
 3. Install the required dependencies:
