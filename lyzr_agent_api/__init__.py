@@ -7,6 +7,7 @@ from lyzr_agent_api.models.session import Session
 from lyzr_agent_api.models.user import UserCreate, UserUpdate
 from lyzr_agent_api.models.tools import OpenAPISchema
 from lyzr_agent_api.client import AgentAPI
+from .utils.slack import SlackLyzrBot
 
 __all__ = [
     "ChatRequest",
@@ -22,4 +23,5 @@ __all__ = [
     "UserUpdate",
     "AgentAPI",
     "OpenAPISchema",
+    "SlackLyzrBot"
 ]
